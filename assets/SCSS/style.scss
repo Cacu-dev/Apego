@@ -1,3 +1,310 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: white;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+
+/**Globales**/
+
+img {
+    max-width: 100%;
+    /* Hace que todas sean imagenes responsivas y se adapten */
+}
+
+h1 {
+    font-family: "Roboto Mono", monospace, "Comic Sans MS";
+    letter-spacing: 15px;
+    color: grey;
+    font-size: 3.4rem;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Roboto Mono", monospace, "Comic Sans MS";
+    letter-spacing: 15px;
+    color: grey;
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-family: "Roboto Mono", monospace, "Comic Sans MS";
+    letter-spacing: 15px;
+    color: grey;
+    font-size: 3rem;
+}
+
+h4 {
+    font-family: "Roboto Mono", monospace, "Comic Sans MS";
+    letter-spacing: 10px;
+    color: grey;
+    font-size: 2.6rem;
+}
+
+hr {
+    margin-top: 6%;
+    width: 35%;
+    height: 1px;
+    background-color: black;
+}
+
+p {
+    color: grey;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0px auto;
+}
+
+.titulos {
+    padding: 5rem 0;
+}
+
+.sepFooter {
+    margin-bottom: 20rem;
+}
+
+footer {
+    padding: 3rem 0;
+    background-image: linear-gradient(white, black);
+    color: white;
+}
+
+.divFooter {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7rem;
+}
+
+.imageFooter a i {
+    color: white;
+    margin-left: 1rem;
+}
+
+
+/******************************************************/
+
+
+/*** HEADER ***/
+
+header {
+    position: sticky;
+    top: 0rem;
+}
+
+.barra {
+    width: 100%;
+    height: 100px;
+    padding-top: 2rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: grey;
+    padding-bottom: 2rem;
+}
+
+.contenedor a {
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.contenedor a:hover {
+    color: orange;
+}
+
+.lv {
+    display: inline-block;
+    border-left: 3px solid white;
+    height: 30px;
+    margin-right: 3rem;
+    margin-left: 1.5rem;
+}
+
+
+/******************************************************/
+
+
+/***NUESTROS PRODUCTOS***/
+
+
+/***QUIENES SOMOS***/
+
+.bordecito {
+    margin-top: 8rem;
+    padding-bottom: 4rem;
+    border: 4mm ridge rgba(170, 50, 220, .6);
+}
+
+.descripcion {
+    text-align: center;
+}
+
+
+/******************************************************/
+
+
+/***INFO PRODUCTOS***/
+
+.tablaFoto {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+/***NEWLETTER***/
+
+.newsletter {
+    background-color: #ececec;
+    border-radius: 2rem;
+    height: 30rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedorN {
+    margin: 0 auto;
+}
+
+
+/***HERRAMIENTAS GENERALES***/
+
+.underline {
+    text-decoration: underline;
+}
+
+.posicionCentrado {
+    text-align: center;
+}
+
+.fixed {
+    position: fixed;
+    margin-left: 5px;
+}
+
+.background {
+    background-color: #fcf1f3;
+    border-radius: 2rem;
+}
+
+.padding {
+    padding: 0 2rem;
+}
+
+
+/******************************************************/
+
+
+/***CONTACTO***/
+
+.contacto {
+    background-color: #7a7a7a;
+    border-radius: 1.5rem;
+}
+
+.formulario {
+    display: flex;
+}
+
+.contenedorF {
+    margin: 5rem auto;
+}
+
+form {
+    padding: 2rem 2rem;
+}
+
+legend {
+    font-size: 2rem;
+    color: white;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    /** Hace que tome todo el espacio disponible y no este uno al lado del otro **/
+}
+
+input,
+textarea {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+textarea {
+    height: 20rem;
+}
+
+
+/***TIENDA***/
+
+.logoT {
+    margin: 15rem auto 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.tienda {
+    margin: 2rem 0;
+}
+
+.contCarru {
+    margin-top: 4rem;
+}
+
+.carruselJs {
+    height: 75%;
+}
+
+.border {
+    border-radius: 1.5rem;
+    margin: 2rem 2rem;
+}
+
+.border span {
+    display: block;
+}
+
+.border img {
+    margin-bottom: 4rem;
+}
+
+.style {
+    background-color: #fdfaf4;
+    padding: 2rem 2rem;
+}
+
+.botoncito {
+    background-color: violet;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 1rem;
+}
+
+
+/******************************************************/
+
+
 /***VARIABLES - SASS II***/
 
 
@@ -73,6 +380,20 @@ monospace,
 
 /***NEWSLETTER***/
 
+.Border__New {
+    border: double 0.5px $violet;
+    background-color: $violet
+}
+
+.background__New h2 {
+    font-weight: 700;
+    color: black;
+}
+
+.background__New p {
+    color: black;
+}
+
 .correo-input {
     height: 5rem;
     width: 40rem;
@@ -80,29 +401,34 @@ monospace,
 
 .fotos__Sass {
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 0 auto 5rem auto;
     .posicion__Sass {
         display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(3, auto);
-        grid-column-gap: 10px;
-        grid-row-gap: 15px;
+        grid-template-columns: repeat(4, auto);
+        grid-column-gap: 1px;
+        grid-row-gap: 0;
         justify-items: center;
-        align-items: center;
+        align-items: stretch;
         align-self: stretch;
-    }
-    p {
-        text-transform: $mayMin;
-        color: grey;
-    }
-    span {
-        text-transform: $mayusculas;
-        font-style: $ital;
-        padding: 10rem 0rem;
+        div div {
+            display: flex;
+            justify-content: center;
+            p {
+                margin-top: 5rem;
+                text-transform: $mayMin;
+                width: 75%;
+                text-align: center;
+                span {
+                    text-transform: $mayusculas;
+                    font-style: $ital;
+                    padding: 10rem 0rem;
+                }
+            }
+        }
     }
 }
 
-.fotos__Sass img:hover {
+.fotos__Sass .img__hover:hover {
     transition: 1s;
     transform: scale(1.1, 1.1);
 }
@@ -158,9 +484,10 @@ monospace,
 /***Novedades***/
 
 .fotos__Sass--Posicion {
-    margin: 12rem 0 5rem 0;
+    margin: 12rem 0 5rem 1px;
     text-align: start;
     font-size: 2rem;
+    text-decoration: double;
 }
 
 .posicion__Sass--Nueva {
