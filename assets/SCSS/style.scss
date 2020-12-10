@@ -1,7 +1,38 @@
+/***PREGUNTAR POR MARGIN RIGHT EN NAV BAR Y POR QUE APAREZCA TEXTO EN LA FOTO AL PASAR HOVER***/
+
+
+/***VARIABLES - SASS II***/
+
+
+/**Colores**/
+
+$violet: #997db4;
+$verdecito: rgb(13, 146, 13);
+$blanco: white;
+$purpurita: rgb(209, 148, 205);
+
+/**Medidas Fuentes**/
+
+$mayusculas: uppercase;
+$mayMin: capitalize;
+
+/**Tipo Fuente**/
+
+$ital: italic;
+$montse: "Montserrat",
+sans-serif;
+$robot: "Roboto Mono",
+monospace,
+"Comic Sans MS";
+
+/******************************************************/
+
+
+/***HTML Y BODY***/
+
 html {
-    box-sizing: border-box;
+    box-sizing: content-box;
     font-size: 62.5%;
-    background-color: white;
 }
 
 body {
@@ -9,6 +40,55 @@ body {
     font-size: 1.5rem;
     line-height: 2;
 }
+
+
+/******************************************************/
+
+
+/***HERRAMIENTAS GENERALES***/
+
+.underline {
+    text-decoration: underline;
+}
+
+.posicionCentrado {
+    text-align: center;
+}
+
+
+/***WHATSAPP***/
+
+.whatsapp {
+    display: block;
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    bottom: 30px;
+    right: 5px;
+    background-color: #00bb2d;
+    box-shadow: 2px 2px 4px #999;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 30px;
+    z-index: 100;
+}
+
+.whatsapp-icon {
+    margin-top: 7px;
+}
+
+.whatsapp-icon:hover {
+    color: $blanco;
+}
+
+.whatsapp:hover {
+    opacity: 0.9;
+    box-shadow: none;
+}
+
+
+/******************************************************/
 
 
 /**Globales**/
@@ -67,27 +147,6 @@ p {
     padding: 5rem 0;
 }
 
-.sepFooter {
-    margin-bottom: 20rem;
-}
-
-footer {
-    padding: 3rem 0;
-    background-image: linear-gradient(white, black);
-    color: white;
-}
-
-.divFooter {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 7rem;
-}
-
-.imageFooter a i {
-    color: white;
-    margin-left: 1rem;
-}
-
 
 /******************************************************/
 
@@ -103,14 +162,17 @@ header {
     width: 100%;
     height: 100px;
     padding-top: 2rem;
+    margin-left: -15px;
+    margin-right: -15px !important;
 }
 
 .header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: grey;
+    background-color: rgb(177, 177, 177);
     padding-bottom: 2rem;
+    z-index: 1;
 }
 
 .contenedor a {
@@ -121,8 +183,12 @@ header {
     font-weight: 500;
 }
 
-.contenedor a:hover {
-    color: orange;
+.header a:hover {
+    color: rgba(255, 193, 255, 0.849);
+}
+
+.header span a:hover {
+    color: white;
 }
 
 .lv {
@@ -137,37 +203,255 @@ header {
 /******************************************************/
 
 
-/***NUESTROS PRODUCTOS***/
-
-
 /***QUIENES SOMOS***/
 
-.bordecito {
-    margin-top: 8rem;
-    padding-bottom: 4rem;
-    border: 4mm ridge rgba(170, 50, 220, .6);
+.tallercito {
+    height: 38rem;
 }
 
-.descripcion {
-    text-align: center;
+.grid__Quienes {
+    margin: 6rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.style__quieneSomos {
+    font-size: x-large;
+    font-weight: 700;
+}
+
+.posicion__Sass {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-column-gap: 6rem;
+    justify-items: center;
+    align-items: stretch;
+    align-self: stretch;
+    div div {
+        display: flex;
+        justify-content: center;
+        p {
+            margin-top: 5rem;
+            text-transform: $mayMin;
+            width: 75%;
+            text-align: center;
+        }
+    }
+}
+
+.fotos__Sass {
+    max-width: 120rem;
+    margin: 0 auto 5rem auto;
+    .posicion__Sass {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-column-gap: 6rem;
+        justify-items: center;
+        align-items: stretch;
+        align-self: stretch;
+        div div {
+            display: flex;
+            justify-content: center;
+            p {
+                margin-top: 5rem;
+                text-transform: $mayMin;
+                width: 75%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.img__hover {
+    width: 225px;
+    height: 225px;
+    margin: 40px;
+    box-shadow: 0px 0px 5px #000;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 2fr 1fr 1fr 2fr;
+    background: rgba(77, 77, 77, 0.9);
+    color: #fef5df;
+    opacity: 0;
+    transition: all 0.5s;
+    font-family: "Roboto Mono", monospace;
+}
+
+.text {
+    padding-left: 20px;
+}
+
+.head {
+    font-size: 30px;
+    line-height: 40px;
+    transform: translateY(40px);
+    transition: all 0.7s;
+    hr {
+        display: block;
+        width: 0;
+        border: none;
+        border-bottom: solid 2px #fef5df;
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        transition: all 0.5s;
+    }
+}
+
+.cont {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 20px;
+    /*font-weight: bold; */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s;
+    .small-text {
+        color: lighten(rgb(77, 77, 77), 40%);
+    }
+}
+
+.img__hover .overlay:hover {
+    opacity: 1;
+    .img__hover.overlay .head :hover {
+        transform: translateY(0px);
+    }
+    hr {
+        width: 75px;
+        transition-delay: 0.4s;
+    }
+    .cont {
+        transform: translateY(0px);
+        transition-delay: 0.3s;
+        opacity: 1;
+    }
 }
 
 
 /******************************************************/
 
 
-/***INFO PRODUCTOS***/
+/***BOTON TIENDA***/
 
-.tablaFoto {
+.contenedor__externo {
+    margin-top: 10rem;
+}
+
+.fondo {
+    background-color: rgb(252, 203, 175);
+    padding: 3rem 0;
+    border-radius: 2rem;
+}
+
+.display {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center center;
+}
+
+.tienda {
+    p {
+        padding: 0.5rem 1rem;
+        color: white;
+        font-weight: 700;
+        font-family: $montse;
+        letter-spacing: 0.5rem;
+    }
+}
+
+.margin__button {
+    margin-top: 2rem;
+}
+
+.style__button {
+    padding: 1rem 6rem;
+    border: none;
+    border-radius: 5px;
+    font-family: $robot;
+    font-weight: 500;
+}
+
+.style__button:hover {
+    background-color: rgb(75, 75, 75);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+
+/******************************************************/
+
+
+/***Novedades***/
+
+.fotos__Sass--Posicion {
+    margin: 12rem 0 5rem 1px;
+    padding-left: 5px;
+    width: 23rem;
+    text-align: center;
+    font-size: 2rem;
+    background-color: rgb(198, 198, 252);
+}
+
+.posicion__Sass--Nueva {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 15px;
+    grid-row-gap: 4rem;
+    justify-content: space-between;
+    justify-items: center;
+    align-self: stretch;
+}
+
+.posicion__Sass--Nueva img {
+    height: 250px;
+    width: 250px;
+}
+
+
+/******************************************************/
+
+
+/***CONDICIONES***/
+
+.condiciones {
+    margin: 0 0 10rem 0;
+    height: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 15px;
+    justify-content: space-around;
+}
+
+.iconos__text i {
+    color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.iconos__text p {
+    font-size: large;
+    text-align: center;
+    line-height: 35px;
+    color: rgb(39, 39, 39);
 }
 
 
 /***NEWLETTER***/
 
 .newsletter {
-    background-color: #ececec;
     border-radius: 2rem;
     height: 30rem;
     display: flex;
@@ -179,29 +463,26 @@ header {
     margin: 0 auto;
 }
 
-
-/***HERRAMIENTAS GENERALES***/
-
-.underline {
-    text-decoration: underline;
+.Border__New {
+    background-color: white;
 }
 
-.posicionCentrado {
-    text-align: center;
+.newsletter__text {
+    background-color: white;
 }
 
-.fixed {
-    position: fixed;
-    margin-left: 5px;
+.background__New h2 {
+    font-weight: 700;
+    color: black;
 }
 
-.background {
-    background-color: #fcf1f3;
-    border-radius: 2rem;
+.background__New p {
+    color: black;
 }
 
-.padding {
-    padding: 0 2rem;
+.correo-input {
+    height: 5rem;
+    width: 40rem;
 }
 
 
@@ -210,17 +491,59 @@ header {
 
 /***CONTACTO***/
 
+.margin__contacto {
+    margin: 5rem 0;
+}
+
+.contacto_posicion {
+    text-align: center;
+}
+
 .contacto {
-    background-color: #7a7a7a;
+    width: 90%;
+    background-color: white;
     border-radius: 1.5rem;
 }
 
-.formulario {
-    display: flex;
+.contacto button {
+    margin-top: 3rem;
+}
+
+.display__form {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-column-gap: 25px;
+    align-self: center;
 }
 
 .contenedorF {
-    margin: 5rem auto;
+    margin: 5rem 5rem;
+}
+
+.iconos__contacto {
+    margin: 8rem 0;
+}
+
+.iconos__contacto i {
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.iconos__contacto a {
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.iconos__contacto p {
+    text-align: center;
+    color: black;
+}
+
+.datos__contacto {
+    margin-top: 4rem;
 }
 
 form {
@@ -255,10 +578,51 @@ textarea {
 }
 
 
+/******************************************************/
+
+
+/***FOOTER***/
+
+span hr {
+    width: 95%;
+    height: 0.5px;
+    background-color: grey;
+}
+
+footer {
+    padding-top: 10rem;
+    background-image: linear-gradient(to top, grey, violet);
+    color: white;
+}
+
+.divFooter {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7rem 0 7rem;
+}
+
+.divFooter p {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.imageFooter a i {
+    color: white;
+    margin-left: 1rem;
+}
+
+
+/******************************************************/
+
+
 /***TIENDA***/
 
+.margen__tienda {
+    margin-top: 5rem;
+}
+
 .logoT {
-    margin: 15rem auto 4rem;
+    margin: 3rem auto;
     display: flex;
     justify-content: center;
 }
@@ -301,214 +665,18 @@ textarea {
     border-radius: 1rem;
 }
 
-
-/******************************************************/
-
-
-/***VARIABLES - SASS II***/
-
-
-/**Colores**/
-
-$violet: #997db4;
-$verdecito: rgb(13, 146, 13);
-$blanco: white;
-$marroncito: rgb(226, 200, 168);
-
-/**Medidas Fuentes**/
-
-$mayusculas: uppercase;
-$mayMin: capitalize;
-
-/**Tipo Fuente**/
-
-$ital: italic;
-$montse: "Montserrat",
-sans-serif;
-$robot: "Roboto Mono",
-monospace,
-"Comic Sans MS";
-
-/*********************************************************/
-
-
-/***WHATSAPP LOGO***/
-
-.whatsapp {
-    display: block;
-    position: fixed;
-    width: 45px;
-    height: 45px;
-    bottom: 50px;
-    right: 5px;
-    background-color: $violet;
-    color: #fff;
-    text-align: center;
-    border-radius: 50px;
-    font-size: 30px;
-    z-index: 100;
-    .notificacion {
-        width: 2px;
-        height: 2px;
-        background-color: red;
-        border-radius: 50px;
-    }
-}
-
-.whatsapp-icon {
-    margin-top: 7px;
-}
-
-.whatsapp-icon:hover {
-    color: $blanco;
-}
-
-.whatsapp:hover {
-    background-color: $verdecito;
+.margin__bottom {
+    margin-bottom: 15rem;
 }
 
 
 /******************************************************/
 
 
-/***QUIENES SOMOS***/
+/***Media Queries***/
 
-.nosotros {
-    margin-right: 0px;
-}
-
-
-/***NEWSLETTER***/
-
-.Border__New {
-    border: double 0.5px $violet;
-    background-color: $violet
-}
-
-.background__New h2 {
-    font-weight: 700;
-    color: black;
-}
-
-.background__New p {
-    color: black;
-}
-
-.correo-input {
-    height: 5rem;
-    width: 40rem;
-}
-
-.fotos__Sass {
-    max-width: 120rem;
-    margin: 0 auto 5rem auto;
-    .posicion__Sass {
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        grid-column-gap: 1px;
-        grid-row-gap: 0;
-        justify-items: center;
-        align-items: stretch;
-        align-self: stretch;
-        div div {
-            display: flex;
-            justify-content: center;
-            p {
-                margin-top: 5rem;
-                text-transform: $mayMin;
-                width: 75%;
-                text-align: center;
-                span {
-                    text-transform: $mayusculas;
-                    font-style: $ital;
-                    padding: 10rem 0rem;
-                }
-            }
-        }
+@media (min-width: 768px) {
+    body {
+        width: 100%;
     }
-}
-
-.fotos__Sass .img__hover:hover {
-    transition: 1s;
-    transform: scale(1.1, 1.1);
-}
-
-
-/***BOTON TIENDA***/
-
-.contenedor__externo {
-    margin-top: 10rem;
-}
-
-.fondo {
-    background-color: $marroncito;
-    padding: 3rem 0;
-    border-radius: 2rem;
-}
-
-.display {
-    display: flex;
-    justify-content: space-around;
-    align-items: center center;
-}
-
-.tienda {
-    p {
-        padding: 0.5rem 1rem;
-        color: white;
-        font-weight: 700;
-        font-family: $montse;
-        letter-spacing: 0.5rem;
-    }
-}
-
-.margin__button {
-    margin-top: 2rem;
-}
-
-.style__button {
-    padding: 1rem 6rem;
-    border: none;
-    border-radius: 5px;
-    font-family: $robot;
-    font-weight: 500;
-}
-
-.style__button:hover {
-    background-color: rgb(75, 75, 75);
-    color: whitesmoke;
-    cursor: pointer;
-}
-
-
-/***Novedades***/
-
-.fotos__Sass--Posicion {
-    margin: 12rem 0 5rem 1px;
-    text-align: start;
-    font-size: 2rem;
-    text-decoration: double;
-}
-
-.posicion__Sass--Nueva {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 10px;
-    grid-row-gap: 15px;
-    justify-content: space-between;
-    justify-items: center;
-    align-self: stretch;
-}
-
-.posicion__Sass--Nueva img {
-    height: 250px;
-    width: 250px;
-}
-
-
-/***AJUSTES***/
-
-.body {
-    margin: 0px;
 }
