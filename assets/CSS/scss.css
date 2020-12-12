@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***PREGUNTAR POR MARGIN RIGHT EN NAV BAR Y POR QUE APAREZCA TEXTO EN LA FOTO AL PASAR HOVER***/
 /***VARIABLES - SASS II***/
 /**Colores**/
@@ -96,116 +97,6 @@ p {
   padding: 5rem 0; }
 
 /******************************************************/
-/***NUESTROS PRODUCTOS***/
-.container {
-  width: 300px;
-  height: 400px;
-  margin: 40px;
-  background-image: url(../imagenes/APEGO6.jpg);
-  background-color: black;
-  background-size: cover;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 5px #000;
-  box-shadow: 0 0 5px #000; }
-
-.container__dos {
-  width: 300px;
-  height: 400px;
-  margin: 40px;
-  background-image: url(../imagenes/APEGO2.jpg);
-  background-size: cover;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 5px #000;
-  box-shadow: 0 0 5px #000; }
-
-.container__tres {
-  width: 300px;
-  height: 400px;
-  margin: 40px;
-  background-image: url(../imagenes/APEGO10.jpg);
-  background-size: cover;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 5px #000;
-  box-shadow: 0 0 5px #000; }
-
-.overlay {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
-  background: rgba(77, 77, 77, 0.9);
-  color: #FEF5DF;
-  opacity: 0;
-  transition: all 0.5s;
-  font-family: "Roboto Mono", monospace; }
-
-.text {
-  padding-left: 20px; }
-
-.head {
-  font-size: 30px;
-  line-height: 40px;
-  transform: translateY(40px);
-  transition: all 0.7s; }
-  .head hr {
-    display: block;
-    width: 0;
-    border: none;
-    border-bottom: solid 2px #FEF5DF;
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    transition: all .5s; }
-
-.cont {
-  font-size: 18px;
-  line-height: 20px;
-  padding: 20px;
-  /*font-weight: bold; */
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.7s; }
-  .cont .small-text {
-    color: #b3b3b3; }
-
-.container:hover .overlay {
-  opacity: 1; }
-  .container:hover .overlay .container:hover .overlay .head {
-    transform: translateY(0px); }
-  .container:hover .overlay hr {
-    width: 75px;
-    transition-delay: 0.4s; }
-  .container:hover .overlay .cont {
-    transform: translateY(0px);
-    transition-delay: 0.3s;
-    opacity: 1; }
-
-.container__dos:hover .overlay {
-  opacity: 1; }
-  .container__dos:hover .overlay .container__dos:hover .overlay .head {
-    transform: translateY(0px); }
-  .container__dos:hover .overlay hr {
-    width: 75px;
-    transition-delay: 0.4s; }
-  .container__dos:hover .overlay .cont {
-    transform: translateY(0px);
-    transition-delay: 0.3s;
-    opacity: 1; }
-
-.container__tres:hover .overlay {
-  opacity: 1; }
-  .container__tres:hover .overlay .container__tres:hover .overlay .head {
-    transform: translateY(0px); }
-  .container__tres:hover .overlay hr {
-    width: 75px;
-    transition-delay: 0.4s; }
-  .container__tres:hover .overlay .cont {
-    transform: translateY(0px);
-    transition-delay: 0.3s;
-    opacity: 1; }
-
-/******************************************************/
 /*** HEADER ***/
 header {
   position: sticky;
@@ -214,9 +105,7 @@ header {
 .barra {
   width: 100%;
   height: 100px;
-  padding-top: 2rem;
-  margin-left: -15px;
-  margin-right: -15px !important; }
+  padding-top: 2rem; }
 
 .header {
   display: flex;
@@ -247,6 +136,119 @@ header {
   margin-left: 1.5rem; }
 
 /******************************************************/
+/***NUESTROS PRODUCTOS***/
+.posicion__Sass {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  grid-column-gap: 0;
+  justify-items: center; }
+  .posicion__Sass div div {
+    display: flex;
+    justify-content: center; }
+    .posicion__Sass div div p {
+      margin-top: 5rem;
+      text-transform: capitalize;
+      width: 75%;
+      text-align: center; }
+
+.tamaño__foto img {
+  width: 300px;
+  height: 220px; }
+
+.container {
+  width: 280px;
+  height: 320px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../imagenes/APEGO6.jpg);
+  background-color: black;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000; }
+
+.container__dos {
+  width: 280px;
+  height: 320px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../imagenes/APEGO2.jpg);
+  background-size: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000; }
+
+.container__tres {
+  width: 280px;
+  height: 320px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../imagenes/APEGO10.jpg);
+  background-size: cover;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000; }
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  background: rgba(77, 77, 77, 0.9);
+  color: #fef5df;
+  opacity: 0;
+  transition: all 0.5s;
+  font-family: "Roboto Mono", monospace; }
+
+.head {
+  color: #fef5df;
+  font-size: 20px;
+  line-height: 40px;
+  transform: translateY(40px);
+  transition: all 0.7s; }
+
+.cont {
+  font-size: 15px;
+  line-height: 20px;
+  padding: 10px;
+  /*font-weight: bold; */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s; }
+  .cont .small-text {
+    color: #b3b3b3; }
+
+.container:hover .overlay {
+  opacity: 1; }
+  .container:hover .overlay .container:hover .overlay .head {
+    transform: translateY(0px); }
+  .container:hover .overlay .cont {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+    opacity: 1; }
+
+.container__dos:hover .overlay {
+  opacity: 1; }
+  .container__dos:hover .overlay .container__dos:hover .overlay .head {
+    transform: translateY(0px); }
+  .container__dos:hover .overlay .cont {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+    opacity: 1; }
+
+.container__tres:hover .overlay {
+  opacity: 1; }
+  .container__tres:hover .overlay .container__tres:hover .overlay .head {
+    transform: translateY(0px); }
+  .container__tres:hover .overlay .cont {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+    opacity: 1; }
+
+/******************************************************/
 /***QUIENES SOMOS***/
 .tallercito {
   height: 38rem; }
@@ -262,23 +264,6 @@ header {
 .style__quieneSomos {
   font-size: x-large;
   font-weight: 700; }
-
-.posicion__Sass {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-column-gap: 6rem;
-  justify-items: center;
-  align-items: stretch;
-  align-self: stretch; }
-  .posicion__Sass div div {
-    display: flex;
-    justify-content: center; }
-    .posicion__Sass div div p {
-      margin-top: 5rem;
-      text-transform: capitalize;
-      width: 75%;
-      text-align: center; }
 
 /***BOTON TIENDA***/
 .contenedor__externo {
@@ -319,7 +304,7 @@ header {
 /******************************************************/
 /***Novedades***/
 .fotos__Sass--Posicion {
-  margin: 12rem 0 5rem 1px;
+  margin: 12rem 0 5rem 8rem;
   padding-left: 5px;
   width: 23rem;
   text-align: center;
@@ -333,7 +318,7 @@ header {
   grid-template-rows: repeat(3, auto);
   grid-column-gap: 15px;
   grid-row-gap: 4rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   justify-items: center;
   align-self: stretch; }
 
