@@ -102,6 +102,9 @@ header {
   position: sticky;
   top: 0rem; }
 
+header nav button {
+  background-color: white; }
+
 .barra {
   width: 100%;
   height: 100px;
@@ -111,7 +114,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #b1b1b1;
+  background-color: grey;
   padding-bottom: 2rem;
   z-index: 1; }
 
@@ -123,7 +126,7 @@ header {
   font-weight: 500; }
 
 .header a:hover {
-  color: rgba(255, 193, 255, 0.849); }
+  color: rgba(255, 173, 255, 0.849); }
 
 .header span a:hover {
   color: white; }
@@ -138,7 +141,6 @@ header {
 /******************************************************/
 /***NUESTROS PRODUCTOS***/
 .posicion__Sass {
-  margin-top: 4rem;
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(4, auto);
@@ -146,9 +148,10 @@ header {
   justify-items: center; }
   .posicion__Sass div div {
     display: flex;
-    justify-content: center; }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .posicion__Sass div div p {
-      margin-top: 5rem;
       text-transform: capitalize;
       width: 75%;
       text-align: center; }
@@ -194,20 +197,15 @@ header {
 .overlay {
   width: 100%;
   height: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
   background: rgba(77, 77, 77, 0.9);
-  color: #fef5df;
   opacity: 0;
   transition: all 0.5s;
   font-family: "Roboto Mono", monospace; }
 
 .head {
-  color: #fef5df;
   font-size: 20px;
   line-height: 40px;
-  transform: translateY(40px);
+  transform: translateY(10px);
   transition: all 0.7s; }
 
 .cont {
@@ -251,7 +249,9 @@ header {
 /******************************************************/
 /***QUIENES SOMOS***/
 .tallercito {
-  height: 38rem; }
+  height: 38rem;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000; }
 
 .grid__Quienes {
   margin: 6rem 5rem;
@@ -381,7 +381,7 @@ header {
 /******************************************************/
 /***CONTACTO***/
 .margin__contacto {
-  margin: 5rem 0; }
+  margin: 5rem 0 8rem 0; }
 
 .contacto_posicion {
   text-align: center; }
@@ -390,6 +390,20 @@ header {
   width: 90%;
   background-color: white;
   border-radius: 1.5rem; }
+
+.botones__formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.fondo__boton {
+  width: 20rem;
+  height: 5rem;
+  color: black;
+  background-color: white;
+  padding: 1rem 0;
+  border: solid 1px black;
+  border-radius: 0.5rem; }
 
 .contacto button {
   margin-top: 3rem; }
@@ -401,7 +415,7 @@ header {
   align-self: center; }
 
 .contenedorF {
-  margin: 5rem 5rem; }
+  margin-bottom: 4rem; }
 
 .iconos__contacto {
   margin: 8rem 0; }
@@ -516,10 +530,49 @@ footer {
   border-radius: 1rem; }
 
 .margin__bottom {
+  padding: 0 15rem;
   margin-bottom: 15rem; }
 
 /******************************************************/
 /***Media Queries***/
-@media (min-width: 768px) {
-  body {
-    width: 100%; } }
+/***NUESTROS PRODUCTOS***/
+@media (max-width: 1223px) {
+  .posicion__Sass {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 2rem;
+    grid-column-gap: 5px; } }
+
+@media (max-width: 942px) {
+  .posicion__Sass {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 2rem; } }
+
+@media (max-width: 768px) {
+  .grid__Quienes {
+    display: flex;
+    flex-direction: column-reverse; }
+  .display__form {
+    display: flex;
+    flex-direction: column; }
+  footer {
+    padding-top: 5rem;
+    background-image: linear-gradient(to top, grey, violet);
+    color: white; }
+    footer .condiciones {
+      display: flex;
+      flex-direction: column; } }
+
+@media (max-width: 610px) {
+  .posicion__Sass {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center; }
+  .container {
+    margin: 4rem 0 4rem 9.7rem; }
+  .container__dos {
+    margin: 4rem 0 4rem 9.7rem; }
+  .container__tres {
+    margin: 4rem 0 4rem 9.7rem; } }
