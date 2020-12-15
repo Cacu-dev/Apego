@@ -73,12 +73,6 @@ h3 {
   color: grey;
   font-size: 3rem; }
 
-h4 {
-  font-family: "Roboto Mono", monospace, "Comic Sans MS";
-  letter-spacing: 10px;
-  color: grey;
-  font-size: 2.6rem; }
-
 hr {
   margin-top: 6%;
   width: 35%;
@@ -86,6 +80,7 @@ hr {
   background-color: black; }
 
 p {
+  font-family: "Roboto Mono", monospace, "Comic Sans MS";
   color: grey; }
 
 .contenedor {
@@ -111,6 +106,7 @@ header nav button {
 
 .header {
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   background-color: grey;
@@ -124,10 +120,10 @@ header nav button {
   color: white;
   font-weight: 500; }
 
-.header a:hover {
+.navegacion__display a:hover {
   color: rgba(255, 173, 255, 0.849); }
 
-.header span a:hover {
+.navegacion__display span a:hover {
   color: white; }
 
 .lv {
@@ -251,7 +247,7 @@ header nav button {
 /******************************************************/
 /***QUIENES SOMOS***/
 #quienessomos {
-  padding-top: 3rem; }
+  padding-top: 5rem; }
 
 .tallercito {
   height: 38rem;
@@ -316,7 +312,7 @@ header nav button {
   grid-column-gap: 15px;
   grid-row-gap: 4rem;
   justify-content: space-evenly;
-  justify-items: center;
+  justify-content: center;
   align-self: stretch; }
 
 .posicion__Sass--Nueva img {
@@ -533,14 +529,15 @@ footer {
 
 /******************************************************/
 /***Media Queries***/
-/***NUESTROS PRODUCTOS***/
 @media (max-width: 1024px) {
+  /***NUESTROS PRODUCTOS***/
   .posicion__Sass {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-row-gap: 2rem;
     grid-column-gap: 5px;
     justify-content: space-evenly; }
+  /***QUIENES SOMOS***/
   #quienessomos {
     padding-top: 8rem; }
   .grid__Quienes {
@@ -549,16 +546,33 @@ footer {
     grid-template-columns: 50rem 45rem;
     grid-column-gap: 5rem;
     justify-items: center;
-    align-items: center; } }
+    align-items: center; }
+  /***TIENDA***/
+  .margin__bottom {
+    padding: 0 2rem;
+    margin-bottom: 15rem; }
+    .margin__bottom .margin__bottom .posicion__Sass--Nueva {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-column-gap: 5px;
+      grid-row-gap: 4rem;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-self: stretch; } }
 
+/******************************************************/
 @media (max-width: 768px) {
+  /***NUESTROS PRODUCTOS***/
   .posicion__Sass {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-row-gap: 2rem; }
+  /***QUIENES SOMOS***/
   .grid__Quienes {
     display: flex;
     flex-direction: column-reverse; }
+  /***NOVEDADES***/
   .posicion__Sass--Nueva {
     margin-top: 3rem;
     display: grid;
@@ -582,8 +596,22 @@ footer {
     footer .contenedorN {
       margin: 0 1rem; }
       footer .contenedorN .newsletter {
-        padding: 1rem; } }
+        padding: 1rem; }
+  /***TIENDA***/
+  .margin__bottom {
+    padding: 0 2rem;
+    margin-bottom: 15rem; }
+    .margin__bottom .margin__bottom .posicion__Sass--Nueva {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-column-gap: 5px;
+      grid-row-gap: 4rem;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-self: stretch; } }
 
+/******************************************************/
 @media (max-width: 600px) {
   #inicio {
     display: grid;
@@ -606,82 +634,120 @@ footer {
     background-color: white; }
   .newsletter {
     display: flex;
-    flex-direction: column; } }
+    flex-direction: column; }
+  /***TIENDA***/
+  .margin__bottom {
+    padding: 0 1rem;
+    margin-bottom: 15rem; }
+    .margin__bottom .margin__bottom .posicion__Sass--Nueva {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-column-gap: 1px;
+      grid-row-gap: 4rem;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-self: stretch; } }
 
+/******************************************************/
 @media (max-width: 480px) {
   #inicio {
     padding: 10rem; }
-  .posicion__Sass {
+  /***QUIENES SOMOS***/
+  .grid__Quienes {
+    margin: 0 2rem;
     display: flex;
-    flex-direction: column;
-    justify-items: center; } }
-
-.posicion__Sass--Nueva {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1px;
-  grid-row-gap: 4rem;
-  justify-content: space-around; }
-
-.fotos__Sass--Posicion {
-  margin: 12rem 0 5rem 12.5rem;
-  padding-left: 5px;
-  width: 23rem;
-  text-align: center;
-  font-size: 2rem;
-  background-color: #c6c6fc; }
-
-.botones__formulario {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-.condiciones {
-  padding-bottom: 10rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 1px; }
-
-.contenedorN {
-  padding: 8rem;
-  border-radius: 2rem;
-  background-color: white; }
-
-.iconos__text {
-  padding: 2px; }
-
-.iconos__text p {
-  font-size: 14px; }
-
-.newsletter {
-  display: flex;
-  flex-direction: column; }
-
-.divFooter {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 2rem 0 2rem; }
-
-/********************************************/
-@media (max-width: 320px) {
+    flex-direction: column; }
+  .contenedor__externo {
+    margin: 0 1rem; }
+  .style {
+    background-color: #fdfaf4; }
   .posicion__Sass {
-    margin-right: 3rem;
     display: flex;
     flex-direction: column;
     justify-items: center; }
+  /***NOVEDADES***/
+  .posicion__Sass--Nueva {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 4rem;
+    justify-content: space-around; }
+  .fotos__Sass--Posicion {
+    margin: 12rem 0 5rem 12.5rem;
+    padding-left: 5px;
+    width: 23rem;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #c6c6fc; }
+  .botones__formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+  .condiciones {
+    padding-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px; }
+  .contenedorN {
+    padding: 8rem;
+    border-radius: 2rem;
+    background-color: white; }
+  .iconos__text {
+    padding: 2px; }
+  .iconos__text p {
+    font-size: 14px; }
+  .newsletter {
+    display: flex;
+    flex-direction: column; }
+  .divFooter {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 2rem 0 2rem; }
+  /***TIENDA***/
+  .margin__bottom {
+    padding: 0 1rem;
+    margin-bottom: 15rem; }
+    .margin__bottom .margin__bottom .posicion__Sass--Nueva {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 1px;
+      grid-row-gap: 4rem;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-self: stretch; }
+  .navbar-expand-sm {
+    background-color: white; }
+  .navbar-toggler {
+    background-color: grey; }
+  .navbar-toggler-icon {
+    background-color: white; } }
+
+/******************************************************/
+@media (max-width: 320px) {
+  /***NUESTROS PRODUCTOS***/
+  .posicion__Sass {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center; }
+  /***QUIENES SOMOS***/
   .grid__Quienes {
-    padding: 0 3rem 0 0; }
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center; }
   .tallercito {
-    height: 50%; }
+    height: 25%; }
   .display {
     display: flex;
     flex-direction: column;
-    padding-left: 2rem; }
+    align-items: center; }
+  .contenedor__externo {
+    margin: 5rem 2rem 0 0;
+    padding-right: 1rem; }
   .margin__button {
     margin-left: 3rem; }
-  .contenedor__externo {
-    margin: 0 4rem 0 1rem; }
   .tienda {
     margin: 2rem 0 0 1rem; }
   .fotos__Sass--Posicion {
@@ -692,22 +758,16 @@ footer {
     font-size: 2rem;
     background-color: #c6c6fc; }
   .posicion__Sass--Nueva {
-    margin: 3rem 3rem 0 0;
     display: grid;
     grid-template-columns: 1fr;
     grid-column-gap: 1px;
     grid-row-gap: 4rem;
     justify-content: center; }
-  #contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
   .margin__contacto {
     margin: 0 0 5px 0; }
   .contacto_posicion {
-    margin-right: 2rem; }
+    text-align: center; }
   .display__form {
-    margin-right: 3rem;
     display: grid;
     grid-template-columns: 320px;
     grid-column-gap: 25px;
@@ -725,18 +785,31 @@ footer {
     font-family: "Roboto Mono", monospace, "Comic Sans MS";
     font-weight: 300; }
   .datos__contacto {
-    margin-top: 2rem; }
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; }
   footer {
-    width: 90%;
     padding-top: 1rem;
     background-image: linear-gradient(to top, grey, violet);
     color: white; }
   .contenedorN {
-    width: 320px; }
+    padding: 2rem 0; }
   .newsletter {
-    border-radius: 2rem;
-    height: 14rem;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; } }
+    display: grid;
+    grid-template-columns: 320px;
+    margin: 0 2rem 10rem 2rem; }
+  /***TIENDA***/
+  .contenedor {
+    width: 100%; }
+  .margin__bottom {
+    padding: 0 1rem;
+    margin-bottom: 15rem; }
+    .margin__bottom .margin__bottom .posicion__Sass--Nueva {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 1px;
+      grid-row-gap: 4rem;
+      justify-content: space-evenly;
+      justify-content: center;
+      align-self: stretch; } }
